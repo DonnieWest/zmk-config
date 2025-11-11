@@ -16,6 +16,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
         behaviors {
@@ -121,14 +122,14 @@
                 system_layer {
                         display-name = "System";
 // -----------------------------------------------------------------------------------------
-// |BTLDR |     |     |     |     |     |   |     |     |     |     |     |      |
-// |BT CLR|BT 0 |BT 1 |BT 2 |BT 3 |BT 4 |   |     | VOLD| VOLU| PLAY| NEXT|      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |BTLDR |     |     |     |     |     |   |     |OUT_TOG|OUT_USB|OUT_BLE|     |      |
+// |BT CLR|BT 0 |BT 1 |BT 2 |BT 3 |BT 4 |   |     | VOLD  | VOLU  | PLAY  | NEXT|      |
+// |      |     |     |     |     |     |   |     |       |       |       |     |      |
+//                    | GUI |     | SPC |   | ENT |       | ALT   |
                         bindings = <
-   &bootloader        &none           &none           &none           &none           &none             &none        &none        &none      &none      &none      &none
-   &bt BT_CLR         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4      &trans       &kp C_VOL_DN &kp C_VOL_UP &kp C_PP &kp C_NEXT &trans
-   &none              &none           &none           &none           &none           &none             &none        &none        &none      &none      &none      &none
+   &bootloader        &none           &none           &none           &none           &none             &none        &out OUT_TOG &out OUT_USB &out OUT_BLE &none      &none
+   &bt BT_CLR         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4      &trans       &kp C_VOL_DN &kp C_VOL_UP &kp C_PP     &kp C_NEXT &trans
+   &none              &none           &none           &none           &none           &none             &none        &none        &none        &none        &none      &none
                                                       &kp LGUI        &trans          &kp SPACE         &kp RET &trans &kp RALT
                         >;
                 };
