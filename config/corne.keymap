@@ -94,12 +94,12 @@
 // -----------------------------------------------------------------------------------------
 // | GRV  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8  |  9  |  0  | BSPC |
 // | DEL  |     |     |     |     |     |   |     | LEFT | DOWN| UP  | RGT |      |
-// |      |     |     |     |     |     |   |     | HOME | END | PGUP| PGDN|      |
+// |      |     |     |     |     |     |   |     | HOME | PGDN| PGUP| END |      |
 //                    | GUI |     | SPC |   |     | L3   | ALT |
                         bindings = <
    &kp GRAVE &kp N1 &kp N2 &kp N3   &kp N4 &kp N5       &kp N6    &kp N7       &kp N8       &kp N9       &kp N0       &kp BSPC
    &kp DEL   &trans &trans &trans   &trans &trans       &trans    &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans
-   &trans    &trans &trans &trans   &trans &trans       &trans    &kp HOME     &kp END      &kp PG_UP    &kp PG_DN    &trans
+   &trans    &trans &trans &trans   &trans &trans       &trans    &kp HOME     &kp PG_DN    &kp PG_UP    &kp END      &trans
                            &kp LGUI &trans &kp SPACE    &trans    &mo 3        &kp RALT
                         >;
                 };
